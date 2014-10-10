@@ -1,0 +1,43 @@
+<%= form_for ([@user,@event]), url:user_events_path do |f| %>
+<% if @event.errors.any? %>
+        <div id="error_explanation">
+
+          <h2><%= pluralize(@event.errors.count, "error") %> prohibited this msg from being saved:</h2>
+
+          <ul>
+            <% @event.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+<p>
+  <%= f.label :name %>
+ <%= f.text_field :name %>
+ </p>
+
+
+<p>
+  <%= f.label :start_at %>
+ <%= f.date_select :start_at %>
+ </p>
+
+ <p>
+  <%= f.label :end_at %>
+ <%= f.date_select :end_at %>
+ </p>
+
+ <p>
+<%= f.label :published_on %>
+<%= f.text_field :published_on ,:id=>"datepicker"%>
+</p>
+
+<%= f.submit %>
+<% end %>
+
+  <script>
+  $(function() {
+  $( "#datepicker" ).datepicker();
+   });
+ </script> 

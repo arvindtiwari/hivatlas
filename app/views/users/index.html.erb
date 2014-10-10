@@ -1,0 +1,12 @@
+HIV ATLAS aims to Collect, Collate, Classify and Disseminate information from most popular and active Websites, Yahoo Groups, Google Groups, E-Groups and other Online or Offline Resources related to HIV, Tuberculosis and Malaria. You Can Help! Volunteer to Post Classified Information! Daily Wire reaches out to more than 95000 subscribers!<br>
+
+
+  <% Blog.all.each do |blog| %>
+    <tr>
+    <%#= blog.inspect%>
+    <td><%= link_to "#{blog.title}", blog_path(blog) %></td><br/> 
+    <td><%#= link_to "#{blog.link}", blog_path(blog) %></td><br/> 
+
+    </tr>
+  <% end %>
+    

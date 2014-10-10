@@ -1,0 +1,27 @@
+<p>
+  <strong> add_title:</strong>
+  <%= @ad.add_title %>
+</p>
+
+<p>
+  <strong>category:</strong>
+  <%= @ad.category %>
+</p>
+
+<p>
+  <strong>state:</strong>
+  <%= @ad.state %>
+</p>
+
+<p>
+  <strong>country:</strong>
+  <%= @ad.country %>
+</p>
+
+  <p>
+  <strong>picture:</strong>
+  
+  <%= image_tag(@ad.picture_url, :width => 200) if @ad.picture.present? %>
+</p
+
+

@@ -1,0 +1,2 @@
+module AddBlogIdToCommentsHelper
+end

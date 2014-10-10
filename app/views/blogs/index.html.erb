@@ -1,0 +1,15 @@
+
+<h1>Listing Blogs</h1>
+
+  <% Blog.all.each do |blog| %>
+    <tr>
+    <%#= blog.inspect%>
+    <td><%= link_to "#{blog.title}", blog_path(blog) %></td><br/> 
+    <td><%#= link_to "#{blog.link}", blog_path(blog) %></td><br/> 
+
+    </tr>
+  <% end %>
+    
+
+
+

@@ -1,0 +1,44 @@
+<%= form_for ([@user,@ad]), url:user_ads_path do |f| %>
+  <p>
+    <%= f.label :add_title %><br>
+    <%= f.text_field :add_title %>
+
+  </p>
+ 
+  <p>
+    <%= f.label :category %><br>
+    <%= f.select :category, options_for_select(%w[Gmail Yahoo MSN]) %>
+
+   </p>
+
+
+
+   <p>
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+
+   </p>
+
+    <p>
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+
+   </p>
+
+
+   <p>
+    <%= f.label :add_text %><br>
+    <%= f.text_field :add_text %>
+
+   </p>
+
+   <p>
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+
+   </p>
+
+
+
+   <%= f.submit %>
+   <% end %>

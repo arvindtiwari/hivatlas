@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hivatlas_daily_digest: MyString
+  latest_job_weekly: MyString
+  new_classified_adds: MyString
+  new_iec_weekly: MyString
+  new_polls_weekly: MyString
+
+two:
+  hivatlas_daily_digest: MyString
+  latest_job_weekly: MyString
+  new_classified_adds: MyString
+  new_iec_weekly: MyString
+  new_polls_weekly: MyString

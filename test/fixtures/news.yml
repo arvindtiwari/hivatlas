@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hiv_atlas_daily_digest: MyString
+  latest_job_weekly: MyString
+  new_classified_adds_weekly: MyString
+
+two:
+  hiv_atlas_daily_digest: MyString
+  latest_job_weekly: MyString
+  new_classified_adds_weekly: MyString

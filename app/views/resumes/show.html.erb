@@ -1,0 +1,19 @@
+<p>
+  <strong> title:</strong>
+  <%= @resume.title %>
+</p>
+
+<p>
+  <strong>profession:</strong>
+  <%= @resume.profession %>
+</p>
+
+<p>
+  <strong>picture:</strong>
+  
+  <%= image_tag(@resume.picture_url, :width => 200) if @resume.picture.present? %>
+</p>
+
+
+
+

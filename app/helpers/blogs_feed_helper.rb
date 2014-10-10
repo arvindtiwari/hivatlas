@@ -1,0 +1,2 @@
+module BlogsFeedHelper
+end

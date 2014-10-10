@@ -1,0 +1,28 @@
+  <p>
+  <strong>title:</strong>
+  <%= @blog.title %><span>me@domain.com</span>
+  </p>
+
+
+
+  <p>
+  <strong>link:</strong>
+  <%= @blog.link.html_safe %>
+  </p>
+ 
+ <%# if !@comments.blank? %>
+   <% for item in @comments %>
+    <%= item.title %> <br>
+   <% end %>
+ 
+ <%= link_to "add comment", new_blog_comment_path(@blog,@comment) %>
+
+
+ 
+
+
+
+
+
+
+

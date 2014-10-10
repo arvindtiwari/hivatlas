@@ -1,0 +1,22 @@
+
+news letter manage 
+
+<%= link_to "my subscription",new_user_news_path %><br>
+
+<%= link_to "send this user a message",new_user_message_path(current_user) %>
+
+<p>
+  <strong> hiv_atlas_daily_digest:</strong>
+  <%= @news.hiv_atlas_daily_digest %>
+</p>
+
+<p>
+  <strong>latest_job_weekly:</strong>
+  <%= @news.latest_job_weekly%>
+</p>
+
+<p>
+  <strong>new_classified_adds_weekly:</strong>
+  <%= @news.new_classified_adds_weekly %>
+</p
+

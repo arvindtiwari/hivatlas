@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+<title>Hivatlas</title>
+
+<%#= link_to image_tag("index.jpeg", :width =>40, :height =>40), user_omniauth_authorize_path(:facebook) %>
+
+<h1>HIV ATLAS</h1><h6>SOCIAL MEDIA FOR HIV, TB & MALARIA!</h6>
+
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+
+    <%= link_to image_tag("images.png", :width =>40, :height =>40), user_omniauth_authorize_path(:twitter) %>
+</head>
+
+ <body>
+    <%= link_to "classified Blogs",blogs_path %> 
+    <% if user_signed_in? %>
+     Signed in as <%=current_user.email %>. Not you?
+     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %><br>
+     <%= link_to "home",root_path %>
+     <%= link_to "resume",  new_user_resume_path(current_user) %>
+     <%= link_to "events", new_user_event_path(current_user) %>
+     <%= link_to "News_Letter", new_user_news_path(current_user) %>
+     <%= link_to "All blogs",blogs_path %>
+     <%= link_to "IEC",new_user_iec_path(current_user) %>
+     <div>My profile!<br>
+     <%= link_to "Message",new_user_message_path(current_user)  %><br>
+     <%= link_to "Create Resume",new_user_resume_path(current_user) %><br>
+     <%= link_to "Post Event",new_user_event_path(current_user) %><br>
+     <%= link_to "Post Job",new_user_job_path(current_user) %><br>
+     <%= link_to "post classifiedAdd",new_user_ad_path(current_user) %>
+     </div>
+     <div>Employee</div>
+     <%= link_to "Post Job",new_user_job_path(current_user)  %><br>
+     <%= link_to "contact Us",new_user_contact_path(current_user) %><br>
+     <%= link_to "Subscribe for new resume",user_path(current_user) %><br>
+     <%= link_to "search Resume", user_resumes_path(current_user) %><br> 
+     <div>Job seeker</div>
+     <%= link_to "cretae resume",new_user_resume_path(current_user)%><br>
+     <%= link_to "contact Us",new_user_contact_path(current_user) %><br>
+     <%= link_to "search job", user_jobs_path(current_user) %><br> 
+     <% else %>
+
+     
+     <%= link_to "Sign up",new_user_registration_path  %> |
+     <%= link_to "Log in",new_user_session_path   %> <br>
+     <%= link_to "home",root_path %>
+     <%= link_to "events",new_user_registration_path %>
+     <%= link_to "classified Adds",new_user_registration_path %>
+     <%= link_to "Video",new_user_registration_path %>
+     <div>
+    <% end %>
+  </div>
+      <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg %>
+      <%end%>
+     <%= yield %>
+</body>
+
+</html>

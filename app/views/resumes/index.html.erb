@@ -1,0 +1,11 @@
+Welcome to the unique online searchable resume database of people living with HIV! If you are person living with HIV, we welcome you to create your resume here. You have the option of keeping it private till you think it is good to be reviewed by potential equal opportunity employers. Online searchable resume database of people living with HIV is scheduled to be started on December 1, 2010. You may subscribe to our Daily Digest or other specific newsletters here. Feedback is much appreciated.  <br>
+
+
+
+<h1>listing resumes </h1>
+<% for item in @resumes %>
+    <%= link_to item.title %> <br>
+   <% end %>
+
+
+<%= link_to " post resume",new_user_session_path   %><br>

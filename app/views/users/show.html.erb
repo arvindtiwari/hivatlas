@@ -1,0 +1,8 @@
+my profile
+<p>
+  <strong> email:</strong>
+  <%=@user.email %>
+  
+</p>
+
+<%= link_to "send this user message", new_user_message_path(current_user,@message) %>

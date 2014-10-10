@@ -1,0 +1,37 @@
+<%= form_for ([@news]), url: user_news_index_path do |f| %>
+  <% if @news.errors.any? %>
+        <div id="error_explanation">
+
+          <h2><%= pluralize(@news.errors.count, "error") %> prohibited this msg from being saved:</h2>
+
+          <ul>
+            <% @news.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>ge new letter subscription </h1>
+
+  <div class="field">
+    <%= f.label :hiv_atlas_daily_digest %>
+    <%= f.check_box :hiv_atlas_daily_digest %>
+  </div>
+  <div class="field">
+    <%= f.label :latest_job_weekly %>
+    <%= f.check_box :latest_job_weekly %>
+  </div>
+  <div class="field">
+    <%= f.label :new_classified_adds_weekly %>
+    <%= f.check_box :new_classified_adds_weekly %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  
+    <div class="actions">
+    <%= f.submit 'subscribe' %>
+  </div>
+<% end %>
